@@ -1,0 +1,197 @@
+/* Temel Sıfırlamalar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #060214;
+    color: #ffffff;
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
+/* Animasyonlu Canlı Uzay Arka Planı */
+.space-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 50% 50%, #140b36 0%, #060214 100%);
+    z-index: -1;
+}
+
+/* Kapsayıcı */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+/* Header */
+header {
+    margin-bottom: 60px;
+}
+
+.logo {
+    font-size: 2.2rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    background: linear-gradient(45deg, #8a2be2, #00ffff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.tagline {
+    font-size: 1rem;
+    color: #a0a0c0;
+    margin-top: 10px;
+}
+
+/* Hero Section */
+.hero h1 {
+    font-size: 2.8rem;
+    font-weight: 800;
+    line-height: 1.3;
+    margin-bottom: 20px;
+}
+
+.highlight {
+    background: linear-gradient(45deg, #ff007f, #00ffff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.description {
+    font-size: 1.1rem;
+    color: #b0b0d0;
+    max-width: 700px;
+    margin: 0 auto 40px auto;
+    line-height: 1.6;
+}
+
+/* Dev Telegram Butonu */
+.cta-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background: linear-gradient(135deg, #0088cc 0%, #00a2ed 100%);
+    color: white;
+    text-decoration: none;
+    padding: 18px 36px;
+    font-size: 1.3rem;
+    font-weight: 600;
+    border-radius: 50px;
+    box-shadow: 0 0 25px rgba(0, 136, 204, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cta-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 35px rgba(0, 136, 204, 0.8);
+}
+
+.tg-icon {
+    width: 28px;
+    height: 28px;
+    fill: white;
+}
+
+/* Özellik Kartları (Features) */
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin: 80px 0;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 30px;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    transition: border 0.3s ease;
+}
+
+.card:hover {
+    border-color: #8a2be2;
+}
+
+.card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    color: #00ffff;
+}
+
+.card p {
+    color: #a0a0c0;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* Yol Haritası (Roadmap) */
+.roadmap {
+    margin: 60px 0;
+    background: rgba(255, 255, 255, 0.02);
+    padding: 40px;
+    border-radius: 20px;
+}
+
+.roadmap h2 {
+    margin-bottom: 30px;
+    font-size: 1.8rem;
+}
+
+.timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.step {
+    padding: 15px 20px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.05);
+    color: #707090;
+}
+
+.step.done {
+    background: rgba(0, 255, 255, 0.1);
+    color: #00ffff;
+    border-left: 4px solid #00ffff;
+}
+
+.step.active {
+    background: rgba(138, 43, 226, 0.2);
+    color: #ffffff;
+    border-left: 4px solid #8a2be2;
+}
+
+/* Footer */
+footer {
+    margin-top: 80px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding-top: 30px;
+    color: #505070;
+    font-size: 0.9rem;
+}
+
+footer p {
+    margin-bottom: 5px;
+}
+
+/* Mobil Uyum Tasarımı */
+@media (max-width: 768px) {
+    .hero h1 { font-size: 2rem; }
+    .description { font-size: 1rem; }
+    .cta-button { font-size: 1.1rem; padding: 15px 30px; }
+}
